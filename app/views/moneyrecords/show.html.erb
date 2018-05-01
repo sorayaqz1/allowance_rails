@@ -1,0 +1,12 @@
+<h1>Showing selected money money record</h1>
+
+<p>
+  <p>Date: <%= @moneyrecord.date %></p>
+  <p>Credit: <%= @moneyrecord.credit %></p>
+  <p>Description: <%= @moneyrecord.desc %></p>
+  <p>Amount: <%= @moneyrecord.amount %></p>
+  <p>Total: <%= @moneyrecord.total %></p>
+</p>
+
+<%= link_to "Edit Record", edit_moneyrecord_path(@moneyrecord) %>
+<%= link_to "All Record", moneyrecords_path %>

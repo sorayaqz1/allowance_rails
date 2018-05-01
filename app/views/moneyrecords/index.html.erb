@@ -1,0 +1,25 @@
+<h1> Amelia's Money summary in Money record index</h1>
+
+<%= link_to "New Record", new_moneyrecord_path %>
+<table>
+  <tr>
+    <td>Date</td>
+    <td>Credit</td>
+    <td>Description</td>
+    <td>Amount</td>
+    <td>Total</td>
+  </tr>
+  <% @moneyrecords.each do |record| %>
+    <tr>
+      <td><%= record.date %></td>
+      <td><%= record.credit %></td>
+      <td><%= record.desc %></td>
+      <td><%= record.amount %></td>
+      <td><%= record.total %></td>
+      <!-- <td><%= link_to "Edit", edit_moneyrecord_path(record) %></td>
+      <td><%= link_to "Delete", moneyrecord_path(record),
+            method: :delete, data: {confirm: "Are you sure?"} %></td> -->
+
+    </tr>
+  <% end %>
+</table>
