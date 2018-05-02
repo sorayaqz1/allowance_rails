@@ -20,6 +20,9 @@ class MoneyrecordsController < ApplicationController
     else
       puts "not able to save ----------------------"
       puts @moneyrecord.errors.full_messages
+      # @moneyrecord.errors.full_messages.each do |error|
+      #     flash[] = error
+      # end
       render 'new' # or :new
     end
     puts Moneyrecord.all
