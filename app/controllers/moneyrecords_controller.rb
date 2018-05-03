@@ -15,7 +15,7 @@ class MoneyrecordsController < ApplicationController
     @moneyrecord = Moneyrecord.new(record_params)
 
     if @moneyrecord.save
-      flash[:notice] = "Successfully Saved the record"
+      flash[:success] = "Successfully Saved the record"
       redirect_to moneyrecord_path(@moneyrecord)
     else
       puts "not able to save ----------------------"
@@ -36,7 +36,7 @@ class MoneyrecordsController < ApplicationController
     @moneyrecord = Moneyrecord.find(params[:id])
     if @moneyrecord.update(record_params)
 
-      flash[:notice] = "You have Successfully update the record"
+      flash[:success] = "You have Successfully update the record"
       redirect_to moneyrecord_path(@moneyrecord)
     else
       puts "not able to udate"
@@ -45,12 +45,12 @@ class MoneyrecordsController < ApplicationController
     end
   end
 
-  # def destroy
-  #   @moneyrecord = Moneyrecord.find(params[:id])
-  #   @moneyrecord.destroy
-  #   flash[:notice] = "Money record has Successfully deleted"
-  #   redirect_to moneyrecords_path
-  # end
+  def destroy
+    @moneyrecord = Moneyrecord.find(params[:id])
+    @moneyrecord.destroy
+    flash[:danger] = "Money record has Successfully deleted"
+    redirect_to moneyrecords_path
+  end
 
   private
 
