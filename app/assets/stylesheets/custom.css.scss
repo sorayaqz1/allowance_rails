@@ -32,6 +32,11 @@ $navbar-default-bg: #08088A;
   box-shadow: none;
 }
 
+.record-actions {
+  border-top: 1px solid #eaeaea;
+  padding-top: 10px;
+}
+
 footer {
   margin-top: 45px;
   margin-top: 5px;
@@ -55,4 +60,9 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 15px;
+}
+
+.value {
+  padding-left: 20px;
+  padding-bottom: 20px;
 }
