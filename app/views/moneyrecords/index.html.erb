@@ -24,7 +24,7 @@
   <thead>
     <tr>
       <th scope="col">Date</th>
-      <th scope="col">Credit</th>
+      <!-- <th scope="col">Credit</th> -->
       <th scope="col">Amount</th>
       <th scope="col">Total</th>
       <th scope="col"></th>
@@ -35,7 +35,7 @@
     <% @moneyrecords.each do |record| %>
       <tr>
         <th scope="row"><%= record.date %></th>
-        <td><%= record.credit %></td>
+        <!-- <td><%= @isCredit %></td> -->
         <td><%= record.amount %></td>
         <td><%= record.total %></td>
         <td><%= link_to "Edit", edit_moneyrecord_path(record), class: "btn btn-xs btn-primary" %>

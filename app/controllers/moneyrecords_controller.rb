@@ -1,6 +1,7 @@
 class MoneyrecordsController < ApplicationController
   def index
     @moneyrecords = Moneyrecord.all
+
   end
 
   def new
@@ -51,6 +52,18 @@ class MoneyrecordsController < ApplicationController
     flash[:danger] = "Money record has Successfully deleted"
     redirect_to moneyrecords_path
   end
+
+  # def isCredit
+  #   @moneyrecord = Moneyrecord.find(params[:id])
+  #   puts "============="
+  #   puts @moneyrecord.credit
+  #   puts "---------"
+  #   if @moneyrecord.credit == true
+  #     @isCredit =  "true"
+  #   else
+  #     @isCredit = "false"
+  #   end
+  # end
 
   private
 
